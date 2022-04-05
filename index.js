@@ -26,7 +26,7 @@ const chooseDistance = (t, k, itemsList) => {
         return results.map(item => {
           let sum = item.reduce((partialSum, a) => partialSum + a, 0)
           return sum
-        }).filter(item => item <= t).at(-1)
+        }).filter(item => item <= t).sort().at(-1)
     }else{
         return null
     }
@@ -35,3 +35,4 @@ const chooseDistance = (t, k, itemsList) => {
 
 console.log(chooseDistance(174, 3, [51, 56, 58, 59, 61]))
 console.log(chooseDistance(163, 3, [51]))
+console.log(chooseDistance(230, 3, [ 91, 74, 73, 85, 73, 81, 87 ]))
